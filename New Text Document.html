@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORROR SITE</title>
+    <link rel="icon" type="image/png" href="https://github.com/tuyulgaul-sketch/skandalkah/blob/c34303f69e476832e344ae784d5db84a5b30cb0c/Trie.jpg?raw=true">
+    <style>
+        body {
+            font-family: Gothic, Gothic;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        header img {
+            height: 100px;
+        }
+        .nav {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: max-content;
+            text-align: left;
+            padding: 5px 0;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            white-space: nowrap;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .nav:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            width: 250px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .btn {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 10px;
+            width: 40%;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 80px;
+            cursor: pointer;
+        }
+        video {
+            width: 30%;
+            height: 30%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://github.com/tuyulgaul-sketch/skandalkah/blob/c34303f69e476832e344ae784d5db84a5b30cb0c/Acil%20Diva.jpg?raw=true" alt="HOT ISSUE">
+        <div class="nav">Horror x Lust Story
+            <div class="dropdown-content">
+                <a href="#">Setan tanpa celana</a>
+                <a href="#">Fuck Ship</a>
+                <a href="#">Diva X A Chill</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="product">
+            <img src="https://github.com/tuyulgaul-sketch/skandalkah/blob/c34303f69e476832e344ae784d5db84a5b30cb0c/Yopi%20Pane%20Pics.jpg?raw=true" alt="YP">
+            <h3>NEW COUPLE 2025</h3>
+            <p>Masih anget bikin MUAAL COOK LIATNYA</p>
+            <a class="btn" onclick="openModal('videoModal1')">Lihat Video</a>
+        </div>
+        <div class="product">
+            <img src="https://github.com/tuyulgaul-sketch/skandalkah/blob/c34303f69e476832e344ae784d5db84a5b30cb0c/Bulek%20pics.jpg?raw=true" alt="bulek">
+            <h3>TOGETHER</h3>
+            <p>TOket GEde benER/diliat kenyang dipegang ga muat</p>
+            <a class="btn" onclick="openModal('videoModal2')">Lihat Video</a>
+        </div>
+    </div>
+
+    <div id="videoModal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('videoModal1')">&times;</span>
+            <video autoplay controls>
+                <source src="https://github.com/tuyulgaul-sketch/skandalkah/raw/c34303f69e476832e344ae784d5db84a5b30cb0c/Yopi%20Pane%20Video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video tag.
+            </video>
+        </div>
+    </div>
+
+    <div id="videoModal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('videoModal2')">&times;</span>
+            <video autoplay controls>
+                <source src="https://github.com/tuyulgaul-sketch/skandalkah/raw/c34303f69e476832e344ae784d5db84a5b30cb0c/Bulek%20vid.mp4" type="video/mp4">
+                Browser Anda tidak mendukung video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>
